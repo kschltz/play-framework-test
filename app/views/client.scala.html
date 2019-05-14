@@ -1,0 +1,16 @@
+@(implicit request: Http.Request)
+
+@main("Clients") {
+
+<ul id="clients"></ul>
+
+<form method="POST" action="@routes.ClientController.addClient()">
+    @helper.CSRF.formField
+    <input type="text" name = "name"/>
+    <input type="text" company = "company"/>
+    <input type="text" country = "country"/>
+    <input type="text" phone = "phone"/>
+
+    <button>Add Client</button>
+</form>
+}
