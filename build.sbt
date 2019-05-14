@@ -9,3 +9,7 @@ scalaVersion := "2.12.8"
 
 libraryDependencies += guice
 libraryDependencies += javaJpa
+libraryDependencies += javaJdbc
+libraryDependencies ++= Seq(javaJdbc,
+  "org.postgresql" % "postgresql" % "42.2.1",
+  "org.projectlombok" % "lombok" % "1.18.8")
